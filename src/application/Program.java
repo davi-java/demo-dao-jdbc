@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -29,6 +30,13 @@ public class Program {
 		System.out.println("\n==== Teste 3: Seller findAll ====");
 		list = sellerDao.findAll();
 		list.forEach(System.out :: println);
+		
+		System.out.println("\n==== Teste 4: Seller insert ====");
+		Seller newSeller = new Seller( 
+				null, "Cleide Silva", "cleidesilva@gmail.com",
+				new Date(), 5000.0, department);
+		sellerDao.insert(newSeller);
+		System.out.println("Id new insert: "+newSeller.getId());
 		
 	}
 
