@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -25,6 +27,10 @@ public class Program2 {
 		departmentDao.update(department);
 		System.out.println("Update Completed!");*/
 		
+		System.out.println();
+		System.out.println("Teste 4 Department FindAll");
+		List<Department> listDepartment = departmentDao.findAll();
+		listDepartment.forEach(System.out :: println);
 		
 	}
 
