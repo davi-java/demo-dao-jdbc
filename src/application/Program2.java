@@ -10,15 +10,22 @@ public class Program2 {
 		
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-		System.out.println("Teste 1 Department Insert");
+		/*System.out.println("Teste 1 Department Insert");
 		Department department = new Department(null, "Cosmetico");
 		departmentDao.insert(department);
-		System.out.println("Id new Insert: "+department.getId());
+		System.out.println("Id new Insert: "+department.getId());*/
+		
+		System.out.println("Teste 2 Department FindById");
+		Department department = departmentDao.findById(8);
+		System.out.println(department);
+		System.out.println();
 
-		System.out.println("Teste 2 Department Update");
+		/*System.out.println("Teste 3 Department Update");
 		department.setName("New Cosmetico!");
 		departmentDao.update(department);
-		System.out.println("Update Completed!");
+		System.out.println("Update Completed!");*/
+		
+		
 	}
 
 }
